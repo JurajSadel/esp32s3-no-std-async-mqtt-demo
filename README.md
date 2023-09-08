@@ -1,6 +1,7 @@
 # esp32s3-no-std-async-mqtt-demo
 
 This is a simple demo that we will use on the upcoming Espressif DevCon23.
+> **_WARN:_** MSRV: 1.72
 
 ESP32 variant: https://github.com/JurajSadel/esp32-no-std-async-mqtt-demo
 
