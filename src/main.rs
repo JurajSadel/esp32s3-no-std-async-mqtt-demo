@@ -9,7 +9,7 @@ use hal::{
     peripherals::{Interrupt, Peripherals, I2C0},
     prelude::{_fugit_RateExtU32, *},
     timer::TimerGroup,
-    Rng, Rtc, IO, {embassy, interrupt},
+    Rng, IO, {embassy, interrupt},
 };
 
 // Wifi-related imports
@@ -65,12 +65,8 @@ fn main() -> ! {
 
     let system = peripherals.SYSTEM.split();
     let clocks = ClockControl::configure(system.clock_control, CpuClock::Clock240MHz).freeze();
-    let mut rtc = Rtc::new(peripherals.RTC_CNTL);
 
     let timer = TimerGroup::new(peripherals.TIMG1, &clocks).timer0;
-    rtc.swd.disable();
-
-    rtc.rwdt.disable();
 
     let init = initialize(
         EspWifiInitFor::Wifi,
