@@ -80,8 +80,8 @@ async fn main(spawner: Spawner) -> ! {
     // and standard I2C clock speed
     let i2c0 = I2c::new(peripherals.I2C0, Config::default())
         .unwrap()
-        .with_sda(peripherals.GPIO21)
-        .with_scl(peripherals.GPIO22)
+        .with_sda(peripherals.GPIO1)
+        .with_scl(peripherals.GPIO2)
         .into_async();
 
     let timg1 = TimerGroup::new(peripherals.TIMG1);

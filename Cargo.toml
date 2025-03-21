@@ -6,9 +6,9 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-esp-hal = { version = "1.0.0-beta.0", features = ["esp32", "unstable"] }
+esp-hal = { version = "1.0.0-beta.0", features = ["esp32s3", "unstable"] }
 esp-wifi = { version = "0.13.0", features = [
-    "esp32",
+    "esp32s3",
     "wifi",
     "esp-alloc",
     "log",
@@ -19,13 +19,13 @@ nb = "1.0.0"
 embedded-io = "0.6.1"
 heapless = "0.8.0"
 esp-backtrace = { version = "0.15.1", features = [
-    "esp32",
+    "esp32s3",
     "exception-handler",
     "panic-handler",
     "println",
 ] }
-esp-hal-embassy = { version = "0.7.0", features = ["esp32"] }
-esp-println = { version = "0.13.1", features = ["esp32", "log"] }
+esp-hal-embassy = { version = "0.7.0", features = ["esp32s3"] }
+esp-println = { version = "0.13.1", features = ["esp32s3", "log"] }
 embassy-net = { version = "0.6.0", features = [
     "tcp",
     "udp",
