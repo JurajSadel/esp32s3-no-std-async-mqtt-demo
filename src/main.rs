@@ -45,6 +45,8 @@ use esp_backtrace as _;
 
 use log::{debug, error, info};
 
+esp_bootloader_esp_idf::esp_app_desc!();
+
 const SSID: &str = env!("SSID");
 const PASSWORD: &str = env!("PASSWORD");
 
